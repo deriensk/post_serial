@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+
+{% for query in queryset %}
+	<a href="{{ query.get_absolute_url }}">{{ query.title }}</a><br/>
+	{{ query.content }}<br/>
+	{{ query.id }}<br/>
+	<hr>
+{% endfor %}	
+
+</body>
+</html>
